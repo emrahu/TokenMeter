@@ -173,3 +173,35 @@ TokenMeter/
 - macOS 26.2+
 - Xcode 26 (Swift 5)
 - An Anthropic organization account with Admin API access (for Anthropic provider)
+
+## Contributing
+
+Contributions are welcome. Whether it's a new provider, a bug fix, or a UI improvement, here's how to get started.
+
+### Getting started
+
+1. Fork the repository and clone your fork
+2. Open `TokenMeter.xcodeproj` in Xcode 26
+3. Build and run with `Cmd+R` (or `xcodebuild -project TokenMeter.xcodeproj -scheme TokenMeter build`)
+
+### Ways to contribute
+
+- **Add a provider** — Implementing a new AI provider (OpenAI, Gemini, etc.) is the most impactful contribution. See [Adding a New Provider](#adding-a-new-provider) for the steps.
+- **Fix a bug** — Check the [issues](https://github.com/emrahu/TokenMeter/issues) for anything open, or open a new issue describing what you found.
+- **Improve the dashboard** — New charts, breakdowns, or polish to the existing views.
+
+### Workflow
+
+1. Create a feature branch off `main` (e.g. `git checkout -b add-gemini-provider`)
+2. Make your change, keeping it focused on a single concern
+3. Follow the existing conventions: MVVM, protocol-based providers, `@MainActor` on view models, and keep provider-specific models behind the service boundary
+4. Build cleanly with no new warnings, and run the app to confirm the change works
+5. Open a pull request against `main` with a clear description of what changed and why
+
+### Guidelines
+
+- Never commit API keys, secrets, or `.xcuserdata` — keys belong in the Keychain, not in source
+- Keep money handling in `Double` dollars (convert at the service boundary)
+- Match the surrounding code style rather than introducing new patterns
+
+If you're planning a larger change, open an issue first so we can discuss the approach.
