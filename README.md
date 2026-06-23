@@ -52,7 +52,7 @@ A stacked bar chart showing token consumption over the selected period.
 
 - **Blue bars** — Input tokens (your prompts, context, cached content)
 - **Purple bars** — Output tokens (model responses)
-- **X-axis** — Time buckets: hours for "Today," days for "Week"/"Month"/"Year"
+- **X-axis** — Daily buckets: weekday names (Mon, Tue, ...) for "Week," dates (Jan 5) for "Month" and "Year"
 - **Y-axis** — Token count with K/M/B abbreviations
 
 This chart helps you identify usage patterns — peak hours, heavy days, or gradual trends.
@@ -108,6 +108,26 @@ Shows usage split by context window size. Larger context windows may have differ
 
 Only appears when multiple providers are configured. Shows total tokens and cost per provider, so you can compare your usage across services.
 
+## Time Period Selector
+
+A segmented control at the top of the dashboard switches the entire view between three periods, each starting from the most recent calendar boundary up to now:
+
+- **Week** — Since the start of the current week (the default)
+- **Month** — Since the first of the current month
+- **Year** — Since January 1 of the current year
+
+## Settings
+
+Open Settings from the gear icon. In addition to provider API keys, two preferences are available (persisted in UserDefaults):
+
+### Auto-refresh
+
+Automatically re-fetches usage on a timer. When enabled, you can pick an interval: 1 min, 5 min, 15 min, 30 min, or 1 hour.
+
+### Budget notifications
+
+Sends a macOS notification as you approach a spending limit. You can set a **daily budget** (checked against the Week period) and a **monthly budget** (checked against the Month period). Alerts fire at 80% and at 100% of each budget.
+
 ## Architecture
 
 ```
@@ -144,6 +164,6 @@ TokenMeter/
 
 ## Requirements
 
-- macOS 14.0+
-- Xcode 26
+- macOS 26.2+
+- Xcode 26 (Swift 5)
 - An Anthropic organization account with Admin API access (for Anthropic provider)
