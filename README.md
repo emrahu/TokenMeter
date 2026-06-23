@@ -5,7 +5,9 @@ A macOS menu bar app that displays your AI token usage — like a utility meter 
 TokenMeter fetches usage data from AI provider APIs and displays aggregate and per-provider statistics in a compact dashboard accessible from your menu bar.
 
 <p align="center">
-  <img src="Screenshot1.png" alt="TokenMeter dashboard showing total tokens, total cost, usage over time, and cache performance" width="350">
+  <img src="Screenshot1.png" alt="TokenMeter dashboard showing total tokens, total cost, usage over time, and cache performance" width="330">
+  &nbsp;&nbsp;
+  <img src="Screenshot2.png" alt="TokenMeter dashboard showing cache performance, cost breakdown, models, service tier, context window, and per-provider breakdown" width="330">
 </p>
 
 ## Supported Providers
