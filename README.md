@@ -1,5 +1,12 @@
 # TokenMeter
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-macOS%2026.2%2B-blue.svg)](https://www.apple.com/macos/)
+[![Swift](https://img.shields.io/badge/Swift-5-orange.svg)](https://swift.org)
+[![Xcode](https://img.shields.io/badge/Xcode-26-147EFB.svg)](https://developer.apple.com/xcode/)
+[![SwiftUI](https://img.shields.io/badge/SwiftUI-MenuBarExtra-0098FF.svg)](https://developer.apple.com/documentation/swiftui)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
+
 A macOS menu bar app that displays your AI token usage — like a utility meter for your house, but for AI API consumption.
 
 TokenMeter fetches usage data from AI provider APIs and displays aggregate and per-provider statistics in a compact dashboard accessible from your menu bar.
@@ -205,3 +212,7 @@ Contributions are welcome. Whether it's a new provider, a bug fix, or a UI impro
 - Match the surrounding code style rather than introducing new patterns
 
 If you're planning a larger change, open an issue first so we can discuss the approach.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
